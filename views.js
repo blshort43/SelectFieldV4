@@ -2,7 +2,6 @@
 import { css } from 'styled-components';
 
 export const CardStyle = css`
-  height: fit-content;
   box-shadow: none;
   margin-bottom: ${props =>
     props.marginBottom || props.mb ? props.marginBottom || props.mb : '6px'};
