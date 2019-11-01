@@ -32,7 +32,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Card } from 'versa-ui';
+import { Card } from 'Rebass';
 import { CardStyle, InputStyle, LegendStyle } from '../Views';
 
 const StyledCard = styled(Card)`
@@ -92,11 +92,7 @@ class SelectField extends React.PureComponent {
     } = this.props;
 
     return (
-      <StyledCard
-        {...props}
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-      >
+      <StyledCard onFocus={this.handleFocus} onBlur={this.handleBlur}>
         <StyledLegend
           labelColor={labelColor}
           style={{
@@ -111,7 +107,7 @@ class SelectField extends React.PureComponent {
           {label}
         </StyledLegend>
         <StyledSelectField
-          // ref="yearSelect"
+          {...props}
           readOnly={!this.props.onChange}
           onChange={onChange}
           error={error}
